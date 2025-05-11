@@ -1,26 +1,88 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+@import url("https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+
+@font-face {
+  font-family: Cinzel, sans-serif;
+  src: url("../public/fonts/cinzel/static/Cinzel-Regular.ttf")
+    format("truetype");
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+@font-face {
+  font-family: Stem, "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  src: url("../public/fonts/EM-Stem/OTF/Stem-Regular.otf"), format("otf");
+  font-display: swap;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+@font-face {
+  font-family: Inter, "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  src: url("../public/fonts/Inter/static/Inter_18pt-Regular.ttf"),
+    format("trueType");
+  font-display: swap;
+}
+
+@theme {
+  --breakpoint-mid: 960px;
+  --color-primary: #cec66d;
+  --color-gray-primary: #444241;
+  --font-logo: "Cinzel", sans-serif;
+  --font-stem: "Stem", sans-serif;
+  --font-inter: "Inter", sans-serif;
+}
+
+* {
+  @apply box-border;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  @apply overflow-x-hidden font-inter;
+}
+
+.main-container {
+  @apply mx-auto px-16;
+}
+
+a.navbar-link {
+  @apply relative transition-colors duration-300 py-1.5;
+}
+
+a.navbar-link:hover {
+  @apply text-gray-600;
+}
+
+a.navbar-link {
+  @apply relative;
+}
+
+a.navbar-link::before {
+  @apply content-[""] absolute -bottom-1 left-0 w-full h-1 bg-gray-primary rounded-md transition-all duration-300 ease-in-out scale-x-0;
+}
+
+a.nabvar-link:hover::before {
+  transform: scaleX(1);
+}
+
+.hero-bg {
+  @apply bg-[url(../public/images/hero-bg.jpg)] bg-cover bg-no-repeat;
+}
+
+.center {
+  @apply flex justify-center items-center;
+}
+
+.line-title {
+  @apply relative;
+}
+.line-title::after {
+  @apply absolute content-[""] top-full left-0 h-0.5 bg-primary;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  @apply flex justify-center items-center w-10 h-10 bg-primary rounded-full;
+}
+
+.swiper-button-prev::after,
+.swiper-button-next::after {
+  @apply text-black text-base font-bold;
 }
