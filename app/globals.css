@@ -16,7 +16,7 @@
 
 @font-face {
   font-family: Inter, "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  src: url("../public/fonts/Inter/static/Inter_18pt-Light.ttf"),
+  src: url("../public/fonts/Inter/static/Inter_18pt-ExtraLight.ttf"),
     format("trueType");
   font-display: swap;
 }
@@ -84,5 +84,5 @@ a.nabvar-link:hover::before {
 
 .swiper-button-prev::after,
 .swiper-button-next::after {
-  @apply text-black text-base font-bold;
+  @apply w-2 h-6 text-black text-base font-bold;
 }

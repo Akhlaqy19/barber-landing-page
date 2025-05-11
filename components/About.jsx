@@ -61,7 +61,10 @@ const About = () => {
 
   return (
     <>
-      <section id="about" className="min-h-100 pb-14 space-y-12 bg-stone-900">
+      <section
+        id="about"
+        className="main-container min-h-100 pb-14 space-y-12 bg-stone-900"
+      >
         <SectionTitle>Our Story</SectionTitle>
 
         <Swiper
