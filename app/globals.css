@@ -16,7 +16,7 @@
 
 @font-face {
   font-family: Inter, "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  src: url("../public/fonts/Inter/static/Inter_18pt-Regular.ttf"),
+  src: url("../public/fonts/Inter/static/Inter_18pt-Light.ttf"),
     format("trueType");
   font-display: swap;
 }
